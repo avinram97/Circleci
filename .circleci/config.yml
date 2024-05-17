@@ -1,1 +1,16 @@
+version: 2.1
+jobs:
+  build:
+   docker:
+     image: circleci/node:20
+     
+steps:
+- checkout
 
+-run :
+ name: Install npm dependencies
+ command: npm install --save
+ 
+ - run :
+ name : Run test
+ command : node example.js
