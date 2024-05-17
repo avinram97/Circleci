@@ -6,9 +6,9 @@ jobs:
      
 steps:
 - checkout
-
-
- 
+ - run :
+    name : Install dependencies
+    command : npm i 
  - run :
     name : Run test
     command : node example.js
